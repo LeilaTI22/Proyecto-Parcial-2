@@ -1,3 +1,4 @@
+globalThis.Buffer = globalThis.Buffer || require("buffer").Buffer;
 import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
 import { getContext } from '@netlify/angular-runtime/context';
 
