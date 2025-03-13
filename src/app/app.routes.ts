@@ -7,27 +7,27 @@ import { EjercicioComponent } from './pages/ejercicio/ejercicio.component';
 
 export const routes: Routes = [
     {
-        path : 'home',
+        path: 'home',
         component: HomeComponent
     },
     {
-        path : 'producto',
-        component: ProductoComponent
+        path: 'about',
+        component: AboutComponent
+    },
+    {
+        path: 'producto',
+        loadComponent: () => import('./pages/producto/producto.component').then(m => m.ProductoComponent)
     },
     {
         path: 'libro',
-        component: LibroComponent
+        loadComponent: () => import('./pages/libro/libro.component').then(m => m.LibroComponent)
     },
     {
         path: 'ejercicio',
-        component:EjercicioComponent
+        loadComponent: () => import('./pages/ejercicio/ejercicio.component').then(m => m.EjercicioComponent)
     },
     {
-        path: 'about',
-        component:AboutComponent
-    },
-    {
-        path:'**',
+        path: '**',
         redirectTo: 'home'
     }
 ];
