@@ -1,3 +1,4 @@
+globalThis.Buffer = globalThis.Buffer || require("buffer").Buffer;
 import {
   AngularNodeAppEngine,
   createNodeRequestHandler,
